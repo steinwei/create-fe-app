@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": "src",
+    "paths": {},
+    "typeRoots": ["@types"],
+    "allowJs": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "sourceMap": false,
+    "lib": [
+      "es7"
+    ],
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "target": "esnext",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "**/*.ts"
+  ],
+  "types": [
+    "node"
+  ],
+  "exclude": [
+    "node_modules",
+    "test"
+  ]
+}
