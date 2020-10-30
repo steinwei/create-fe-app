@@ -63,7 +63,7 @@ export default class BasePage {
         // window._T.page_main_end = new Date();
         ReactDOM.render(reactRedux, container, (component) => {
             if (container.getElementsByTagName("*").length > 0 && this.autoStopLoading) {
-                // feflow: avreport-render_succ
+                // cli-demo: avreport-render_succ
                 this.stopPageLoading();
             }
         });

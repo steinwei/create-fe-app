@@ -11,7 +11,7 @@ export function getActivityConfig () {
     return {
         actionType: GET_ACTIVITY_CONFIG,
         'Call API': {
-            url: `//feflow.test.com/getactivityconfig`,
+            url: `//cli-demo.test.com/getactivityconfig`,
             types: [GET_ACTIVITY_CONFIG, GET_ACTIVITY_CONFIG_SUCCESS, GET_ACTIVITY_CONFIG_FAIL],
             type: 'get',
             data: {

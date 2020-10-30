@@ -9,13 +9,13 @@
 
 ### 1.1 开发环境配置
 
-安装feflow：
+安装cli-demo：
 
 ```sh
-$ npm install -g feflow-cli
+$ npm install -g cli-demo-cli
 ```
 
-更多feflow操作请前往feflow文档: http://www.feflowjs.org/zh-cn/docs/
+更多cli-demo操作请前往cli-demo文档: http://www.cli-demojs.org/zh-cn/docs/
 
 ### 1.2 开发过程
 
@@ -23,10 +23,10 @@ $ npm install -g feflow-cli
 
 ```sh
 # 开发
-$ feflow dev
+$ cli-demo dev
 
 # 发布
-$ feflow build
+$ cli-demo build
 ```
 
 #### 1.2.2 代理配置

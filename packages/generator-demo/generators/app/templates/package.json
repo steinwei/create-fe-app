@@ -7,7 +7,7 @@
     "commitmsg": "validate-commit-msg",
     "commit": "git-cz ",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "pub:jenkins": "feflow build"
+    "pub:jenkins": "cli-demo build"
   },
   "lint-staged": {
     "src/*.{js,jsx}": [
