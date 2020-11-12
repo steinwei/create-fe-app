@@ -6,7 +6,7 @@
   "author": "sjisntsuperman <weishijiestein@outlook.com>",
   "homepage": "https://github.com/sjisntsuperman/cli-demo/tree/master/packages/builder-webpack-demo#readme",
   "license": "ISC",
-  "main": "lib/builder-webpack-demo.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"

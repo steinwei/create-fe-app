@@ -21,12 +21,12 @@
         "externals": [
             {
                 "module": "react",
-                "entry": "//11.url.cn/now/lib/16.2.0/react.min.js?_bid=3123",
+                "entry": "https://cdn.bootcdn.net/ajax/libs/react/17.0.1/cjs/react.production.min.js",
                 "global": "React"
             },
             {
                 "module": "react-dom",
-                "entry": "//11.url.cn/now/lib/16.2.0/react-dom.min.js?_bid=3123",
+                "entry": "https://cdn.bootcdn.net/ajax/libs/react-dom/17.0.1/cjs/react-dom.production.min.js",
                 "global": "ReactDOM"
             }
         ]
