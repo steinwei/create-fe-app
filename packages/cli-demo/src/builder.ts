@@ -107,5 +107,7 @@ export default (ctx: CustomTS) => {
 
   cmd.register("dev", () => new Builder(ctx).runBuild("dev"));
 
-  return cmd.register("build", () => new Builder(ctx).runBuild("build"));
+  cmd.register("build", () => new Builder(ctx).runBuild("build"));
+
+  return Promise.resolve()
 }

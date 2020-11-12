@@ -94,4 +94,5 @@ export
 export default (ctx: CustomTS) => {
 	const cmd = ctx.cmd
 	cmd.register("init", () => new Generator(ctx).init())
+	return Promise.resolve()
 }

@@ -1,22 +1,29 @@
 
-// import {EventEmitter} from 'events'
-import path from 'path'
-import process from 'process'
-import osenv from 'osenv'
-import minimist from 'minimist'
-import fs from 'fs-extra'
-import vm from 'vm'
+import path from 'path';
+import process from 'process';
+import osenv from 'osenv';
+import minimist from 'minimist';
+import fs from 'fs-extra';
+import vm from 'vm';
+import { Command } from './command';
+import initClient from "./initClient";
+import loadPlugins from './loadPlugins';
+import { createLogger } from './utils/logger';
+import Generator from "./generator";
+import Builder from "./builder";
+import Install from "./utils/install";
+import checkUpdates from './utils/checkUpdate';
+import Help from './utils/help'
+// import parseYaml from './utils/parseYml';
 
-import { Command } from './command'
-import initClient from "./initClient"
-import loadPlugins from './loadPlugins'
-import { createLogger } from './utils/logger'
+const pkg = require('../package.json')
 
-const baseDir = osenv.home()
-const workDir = process.cwd()
-const homeDir = path.join(baseDir, '.cli-demo')
-const pluginDir = path.join(homeDir, 'node_modules')
+const baseDir = osenv.home();
+const workDir = process.cwd();
+const homeDir = path.join(baseDir, '.cli-demo');
+const pluginDir = path.join(homeDir, 'node_modules');
 
+const ymlPath = path.join(workDir, '.cli-demo.yml');
 /**
  * CORE
  */
@@ -31,17 +38,20 @@ class CLI {
     workDir: pathName;
     config: CustomTS;
     args: minimist.ParsedArgs
+    version: String;
 
     constructor(args: minimist.ParsedArgs) {
-        this.homeDir = homeDir
-        this.pluginDir = pluginDir
-        this.cmd = new Command()
-        this.workDir = workDir
-        this.baseDir = homeDir
-        this.args = args
+        this.homeDir = homeDir;
+        this.pluginDir = pluginDir;
+        this.cmd = new Command();
+        this.workDir = workDir;
+        this.baseDir = homeDir;
+        this.args = args;
+        this.version = pkg.version
         // todo
+        // this.config = parseYaml(ymlPath) || {};
         this.config = {}
-        this.logger = createLogger(this)
+        this.logger = createLogger(this);
     }
 
     async init(){
@@ -49,12 +59,13 @@ class CLI {
         await initClient(this);
         await loadPlugins(this);
 
-        (require('./generator').default)(this);
-        (require('./builder').default)(this);
-        (require('./utils/install').default)(this);
+        await Generator(this);
+        await Install(this);
+        await Builder(this);
+        await Help(this);
 
         return Promise.resolve().then((p)=> {
-            this.logger.info('initial done')
+            this.logger.info('initial done');
         })
     }
 
@@ -77,8 +88,12 @@ class CLI {
         })
     }
 
+    // todo
     checkUpdate(){
-
+        if (typeof this.config == 'object' && this.config != null) {
+            const { registry } = this.config;
+            checkUpdates('cli-demo','latest', registry);
+        }
     }
 
     /**
@@ -119,3 +134,5 @@ const entry = () => {
 }
 
 export default entry
+
+module.exports = entry

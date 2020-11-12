@@ -1,24 +1,10 @@
-import spawn from "cross-spawn";
-
-export default (ctx: CustomTS)=>{
-    const cmd = ctx.cmd
-    const baseDir = ctx.baseDir
-    cmd.register("install", (args: CustomTS)=>new Install(ctx).execNpmCmd("install", args['_'][0], baseDir))
-    return Promise.resolve()
-}
+import spawn from 'cross-spawn'
 
 export
-class Install{
-    ctx: CustomTS
-
-    constructor(ctx:CustomTS){
+class Upgrade {
+    ctx: CustomTS;
+    constructor(ctx: CustomTS) {
         this.ctx = ctx
-    }
-
-    checkUpdate(plugins: CustomTS) {
-        return new Promise((resolve, reject)=> {
-            
-        })
     }
 
     execNpmCmd(cmd:string, modules: string, where: pathName){
@@ -61,4 +47,9 @@ class Install{
             });
         })
     }
+}
+
+export default (ctx: CustomTS) => {
+    const cmd = ctx.cmd
+    // cmd.register('upgrade', ()=>)
 }

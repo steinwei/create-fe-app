@@ -14,14 +14,14 @@
     "lib"
   ],
   "bin": {
-    "cli-demo": "./bin/cli-demo.js"
+    "cli-demo": "./bin/cli-demo"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sjisntsuperman/some-demo.git"
   },
   "scripts": {
-    "dev": "node dist/index.js --init",
+    "dev": "node bin/cli-demo",
     "build": "tsc --build",
     "test": "jest"
   },
@@ -29,6 +29,8 @@
     "url": "https://github.com/sjisntsuperman/some-demo/issues"
   },
   "dependencies": {
+    "@types/js-yaml": "^3.12.5",
+    "@types/request-promise": "^4.1.46",
     "@types/webpack": "^4.41.22",
     "@types/yeoman-environment": "^2.10.1",
     "chalk": "^4.1.0",
@@ -38,9 +40,12 @@
     "fs-extra": "^9.0.1",
     "html-webpack-plugin": "^4.5.0",
     "inquirer": "^7.3.3",
+    "js-yaml": "^3.14.0",
+    "meow": "^8.0.0",
     "ora": "^5.1.0",
     "osenv": "^0.1.5",
     "program": "^1.0.0",
+    "request-promise": "^4.2.6",
     "shelljs": "^0.8.4",
     "winston": "^3.3.3",
     "yeoman-environment": "^2.10.3"
