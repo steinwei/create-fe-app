@@ -1,5 +1,5 @@
 {
-  "name": "cli-demo",
+  "name": "fe-cli",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,16 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sjisntsuperman/cli-demo.git"
+    "url": "git+https://github.com/sjisntsuperman/fe-cli.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sjisntsuperman/cli-demo/issues"
+    "url": "https://github.com/sjisntsuperman/fe-cli/issues"
   },
-  "homepage": "https://github.com/sjisntsuperman/cli-demo#readme",
-  "devDependencies": {
-    "lerna": "^3.22.1"
-  }
+  "homepage": "https://github.com/sjisntsuperman/fe-cli#readme"
 }

@@ -20,30 +20,11 @@ generator 为 模板生成器。
 
 fe-cli 里包含有 command，builder，generator几大主要功能模块。
 
-### Get Started
-
-```sh
-npm set registry=https://r.npm.taobao.org/
-npm install -g @steinwei/fe-cli
-```
-
-### 安装插件
-
-```sh
-fe-cli install @steinwei/builder-webpack-demo
-fe-cli install @steinwei/generator-demo
-# 生成模板
-fe-cli init
-# 本地构建
-fe-cli dev
-# 打包应用
-fe-cli build
-```
-
 ### 暂未实现功能
 
 - checkUpdate 检测脚手架更新 以及 检测插件的更新
-- prompt 根据互动，自动下载插件或模板到本地
+- 根据互动，自动下载插件或模板到本地
+- build，没打通CI/CD，仅仅是单纯的webpack工具的打包，需要自己另外接入CICD流程中
 
 ### 已实现功能
 
@@ -124,3 +105,7 @@ generator 的主要作用是把上下文传递给 generator， generator 利用 
 脚手架就是通过yeoman来生成模板的，因此模板中会需要到它。
 
 生成后的模板不会与yeoman有联系。
+
+## 声明
+
+此项目借鉴于腾讯ivweb团队的外部开源脚手架，侵权即删。
