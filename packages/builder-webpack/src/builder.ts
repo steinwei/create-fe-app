@@ -17,10 +17,10 @@ import {deepCopy, listDir, merge, isEmpty, getCSSModulesLocalIdent} from './util
 import Config from './config';
 
 // 当前运行的时候的根目录
-let projectRoot: string = Config.getPath('fe-cli.json');
+let projectRoot: string = Config.getPath('create-fe-app.json');
 
 if (!projectRoot) {
-    projectRoot = Config.getPath('fe-cli.js');
+    projectRoot = Config.getPath('create-fe-app.js');
 }
 
 export interface BaseConfig {
@@ -184,7 +184,7 @@ class Builder {
         devConfig.devServer = this.setDevServer(options.port || 8001);
         devConfig.resolve.alias = this.setAlias(options.alias);
         devConfig.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
-        // 设置 loader 的npm包查找的相对路径，包括本地node_modules、.fe-cli、测试环境的node_module
+        // 设置 loader 的npm包查找的相对路径，包括本地node_modules、.create-fe-app、测试环境的node_module
         devConfig.resolveLoader = this.setResolveLoaderPath(options.runtime);
 
         return devConfig;
@@ -296,7 +296,7 @@ class Builder {
         prodConfig.bail = true;
         prodConfig.resolve.alias = this.setAlias(options.alias);
         prodConfig.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
-        // 设置 loader 的npm包查找的相对路径，此处设置在全局的 .fe-cli 目录下
+        // 设置 loader 的npm包查找的相对路径，此处设置在全局的 .create-fe-app 目录下
         prodConfig.resolveLoader = this.setResolveLoaderPath(options.runtime);
 
         return prodConfig;
@@ -851,7 +851,7 @@ class Builder {
 
     static setResolveLoaderPath(runtime?: string): object {
         const jbRuntime = runtime || 'runtime-now-6';
-        const resolveLoaderPath = path.join(osenv.home(), './.fe-cli/node_modules');
+        const resolveLoaderPath = path.join(osenv.home(), './.create-fe-app/node_modules');
         // Loader在捷豹平台的查找路径
         const jbLoaderPath = `/data/frontend/install/AlloyDist/${jbRuntime}/node_modules`;
 

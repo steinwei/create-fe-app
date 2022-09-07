@@ -8,8 +8,8 @@ export default class DefaultComponent extends React.Component {
     render() {
         return (
             <div className="default-component">
-                <p>欢迎使用由fe-cli提供的Starkit.</p>
-                <p>fe-cli官网：<a href="http://fe-clijs.org/">http://fe-clijs.org/</a></p>
+                <p>欢迎使用由create-fe-app提供的Starkit.</p>
+                <p>create-fe-app官网：<a href="http://create-fe-appjs.org/">http://create-fe-appjs.org/</a></p>
             </div>
         );
     }

@@ -1,5 +1,5 @@
 {
-  "name": "@steinwei/generator-demo",
+  "name": "@steinwei/generator",
   "version": "0.0.2",
   "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
   "keywords": [],
@@ -13,17 +13,9 @@
   "files": [
     "lib"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sjisntsuperman/some-demo.git"
-  },
   "scripts": {
     "build": "tsc --build"
   },
-  "bugs": {
-    "url": "https://github.com/sjisntsuperman/some-demo/issues"
-  },
-  "homepage": "https://github.com/sjisntsuperman/some-demo#readme",
   "devDependencies": {
     "@types/node": "^14.14.0"
   },

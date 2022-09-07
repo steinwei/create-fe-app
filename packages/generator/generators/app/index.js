@@ -15,7 +15,7 @@ export default class extends Generator {
    * Print welcome message
    */
   initializing() {
-    this.log(yosay('fe-cli脚手架示例'));
+    this.log(yosay('create-fe-app脚手架示例'));
   }
 
   /**

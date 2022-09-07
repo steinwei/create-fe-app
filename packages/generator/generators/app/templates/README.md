@@ -9,13 +9,13 @@
 
 ### 1.1 开发环境配置
 
-安装fe-cli：
+安装create-fe-app：
 
 ```sh
-$ npm install -g fe-cli-cli
+$ npm install -g create-fe-app-cli
 ```
 
-更多fe-cli操作请前往fe-cli文档: http://www.fe-clijs.org/zh-cn/docs/
+更多create-fe-app操作请前往create-fe-app文档: http://www.create-fe-appjs.org/zh-cn/docs/
 
 ### 1.2 开发过程
 
@@ -23,10 +23,10 @@ $ npm install -g fe-cli-cli
 
 ```sh
 # 开发
-$ fe-cli dev
+$ create-fe-app dev
 
 # 发布
-$ fe-cli build
+$ create-fe-app build
 ```
 
 #### 1.2.2 代理配置

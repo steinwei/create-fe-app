@@ -11,7 +11,7 @@ export function getActivityConfig () {
     return {
         actionType: GET_ACTIVITY_CONFIG,
         'Call API': {
-            url: `//fe-cli.test.com/getactivityconfig`,
+            url: `//create-fe-app.test.com/getactivityconfig`,
             types: [GET_ACTIVITY_CONFIG, GET_ACTIVITY_CONFIG_SUCCESS, GET_ACTIVITY_CONFIG_FAIL],
             type: 'get',
             data: {

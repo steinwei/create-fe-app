@@ -1,11 +1,11 @@
-# `generator-fe-cli`
+# `generator-create-fe-app`
 
 > TODO: description
 
 ## Usage
 
 ```
-const generatorCliDemo = require('generator-fe-cli');
+const generatorCli = require('generator-create-fe-app');
 
 // TODO: DEMONSTRATE API
 ```

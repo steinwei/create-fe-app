@@ -1,10 +1,10 @@
 {
-  "name": "@steinwei/builder-webpack-demo",
+  "name": "@steinwei/builder-webpack",
   "version": "0.0.2",
   "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
   "keywords": [],
   "author": "sjisntsuperman <weishijiestein@outlook.com>",
-  "homepage": "https://github.com/sjisntsuperman/fe-cli/tree/master/packages/builder-webpack-demo#readme",
+  "homepage": "https://github.com/sjisntsuperman/create-fe-app/tree/master/packages/builder-webpack#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -19,13 +19,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sjisntsuperman/fe-cli.git"
+    "url": "git+https://github.com/sjisntsuperman/create-fe-app.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/sjisntsuperman/fe-cli/issues"
+    "url": "https://github.com/sjisntsuperman/create-fe-app/issues"
   },
   "dependencies": {
     "@babel/core": "^7.0.0",

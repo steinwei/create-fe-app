@@ -143,9 +143,9 @@ export const postMessage = {
         process && process.send && process.send(JSON.stringify({ type: channel, data }));
     },
     error(type: BuilderType, msg?: any) {
-        this.send(`fe-cli:builder:${type}:error`, msg)
+        this.send(`create-fe-app:builder:${type}:error`, msg)
     },
     success(type: BuilderType, msg?: any) {
-        this.send(`fe-cli:builder:${type}:success`, msg)
+        this.send(`create-fe-app:builder:${type}:success`, msg)
     }
 }

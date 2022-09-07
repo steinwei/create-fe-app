@@ -1,11 +1,11 @@
-# `builder-webpack-demo`
+# `builder-webpack`
 
 > TODO: description
 
 ## Usage
 
 ```
-const builderWebpackDemo = require('builder-webpack-demo');
+const builderWebpack = require('builder-webpack');
 
 // TODO: DEMONSTRATE API
 ```
